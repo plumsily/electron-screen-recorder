@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <script defer src="render.js"></script>
+  </head>
+  <body>
+    <section class="section container content">
+      <h1>Screen Recorder App</h1>
+      <video src=""></video>
+      <div class="field is-grouped is-flex is-justify-content-center">
+        <p class="control">
+          <button id="startBtn" class="button is-primary">Start</button>
+        </p>
+        <p class="control">
+          <button id="stopBtn" class="button is-warning">Stop</button>
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <button id="videoSelectBtn" class="button is-link">
+        Choose a Video Source!
+      </button>
+    </section>
+  </body>
+</html>
