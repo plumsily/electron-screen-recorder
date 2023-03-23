@@ -54,8 +54,8 @@ app.whenReady().then(() => {
   createWindow();
 
   // Implement menu
-  // const mainMenu = Menu.buildFromTemplate(menu);
-  // Menu.setApplicationMenu(mainMenu);
+  const mainMenu = Menu.buildFromTemplate(menu);
+  Menu.setApplicationMenu(mainMenu);
 
   //Remove mainwindow from memory on close
   mainWindow.on("closed", () => (mainWindow = null));
@@ -93,6 +93,13 @@ ipcMain.handle("get-sources", async () => {
 
   videoOptionsMenu.popup();
 });
+
+//Menu
+const menu = [
+  {
+    role: "fileMenu",
+  },
+];
 
 //Open save dialog
 ipcMain.handle("save-dialog", async () => {
